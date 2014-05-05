@@ -9,17 +9,7 @@ namespace LargestPrimeFactor
 {
     class Program
     {
-        /*static void Main(string[] args)
-        {
-            long num = 600851475143;
-            ArrayList primelist = new ArrayList();
-            for (long i = num - 1; i > 1; i--)
-            {
-                if (isPrime(i))
-                    primelist.Add(i);
-            }
-        }*/
-
+       
 
         static void Main(string[] args)
         {
