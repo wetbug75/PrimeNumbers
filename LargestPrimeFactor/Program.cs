@@ -9,23 +9,20 @@ namespace LargestPrimeFactor
 {
     class Program
     {
-       
-
         static void Main(string[] args)
         {
-            long num = 600851475143;
-            for (long i = num; i > 1; i--)
+            long i = 1;
+            ArrayList primelist = new ArrayList();
+            while(i < 600851475143)
             {
+                i++;
                 if (isPrime(i))
                 {
-                    if(num % i == 0)
-                    {
-                        Console.WriteLine(i);
-                        Console.ReadLine();
-                    }
+                    primelist.Add(i);
+                    //Console.WriteLine(i);
                 }
             }
-            Console.WriteLine("end");
+            Console.WriteLine("done");
             Console.ReadLine();
         }
 
@@ -35,7 +32,7 @@ namespace LargestPrimeFactor
             {
                 if (n % i == 0)
                     return false;
-                Console.WriteLine("test: " + i);
+                //Console.WriteLine("test: " + i);
             }
             return true;
         }
