@@ -11,18 +11,29 @@ namespace LargestPrimeFactor
     {
         static void Main(string[] args)
         {
+            long num = 600851475143;
             long i = 1;
-            ArrayList primelist = new ArrayList();
-            while(i < 600851475143)
+            long max = num;
+            long answer = 1;
+            if(isPrime(num))
+                Console.WriteLine(num);
+            else
             {
-                i++;
-                if (isPrime(i))
+                while(i <= max)
                 {
-                    primelist.Add(i);
-                    //Console.WriteLine(i);
+                    i++;
+                    if (isPrime(i))
+                    {
+                        max = num / i;
+                        if (num % i == 0)
+                        {
+                            answer = i;
+                        }
+                    }
+                    Console.WriteLine(max);
                 }
             }
-            Console.WriteLine("done");
+            Console.WriteLine("Answer: " + answer);
             Console.ReadLine();
         }
 
